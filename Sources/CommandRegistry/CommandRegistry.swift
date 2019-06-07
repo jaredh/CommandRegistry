@@ -30,9 +30,9 @@ public struct Registry {
 		commands.append(command.init(parser: parser))
 	}
 	
-	public func run() {
+	public func run(arguments: [String] = ProcessInfo.processInfo.arguments) {
 		do {
-			let parsedArguments = try parse()
+			let parsedArguments = try parse(arguments: arguments)
 			try process(arguments: parsedArguments)
 			exit(EXIT_SUCCESS)
 		}
@@ -46,9 +46,8 @@ public struct Registry {
 		}
 	}
 	
-	private func parse() throws -> ArgumentParser.Result {
-		let arguments = Array(ProcessInfo.processInfo.arguments.dropFirst())
-		return try parser.parse(arguments)
+	private func parse(arguments: [String]) throws -> ArgumentParser.Result {
+		return try parser.parse(Array(arguments.dropFirst()))
 	}
 	
 	private func process(arguments: ArgumentParser.Result) throws {
