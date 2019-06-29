@@ -1,4 +1,4 @@
-// swift-tools-version:4.2
+// swift-tools-version:5.0
 import PackageDescription
 
 let package = Package(
@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "CommandRegistry", targets: ["CommandRegistry"])
     ],
     dependencies: [
-       .package(url: "https://github.com/apple/swift-package-manager.git", from: "0.3.0")
+       .package(url: "https://github.com/apple/swift-package-manager.git", .exact("0.3.0"))
     ],
     targets: [
         .target(
