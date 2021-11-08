@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Utility
+import TSCUtility
 
 public protocol Command {
 	var command: String { get }

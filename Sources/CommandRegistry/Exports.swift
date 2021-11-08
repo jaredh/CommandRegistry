@@ -5,5 +5,5 @@
 //  Created by Geoffrey Foster on 2019-06-28.
 //
 
-@_exported import Basic
-@_exported import Utility
+@_exported import TSCBasic
+@_exported import TSCUtility

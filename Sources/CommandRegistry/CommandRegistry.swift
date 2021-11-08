@@ -6,8 +6,8 @@
 //
 
 import Foundation
-import Utility
-import Basic
+import TSCUtility
+import TSCBasic
 
 public struct Registry {
 	private let parser: ArgumentParser
