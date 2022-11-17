@@ -7,7 +7,7 @@ let package = Package(
         .library(name: "CommandRegistry", targets: ["CommandRegistry"])
     ],
     dependencies: [
-		.package(url: "https://github.com/apple/swift-tools-support-core.git", .exact("0.2.3"))
+		.package(url: "https://github.com/apple/swift-tools-support-core.git", .exact("0.2.7"))
     ],
     targets: [
         .target(
